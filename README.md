@@ -1,4 +1,4 @@
-# fast-auth
+# easy-and-fast-auth
 
 Easy and fast authantication and authorization for your projects
 
@@ -9,15 +9,15 @@ Easy and fast authantication and authorization for your projects
 ### Installation
 
 ```sh
-    npm install fast-auth
+    npm install easy-and-fast-auth
 ```
 
 ### Usage
 
-Add fast-auth package to your project.
+Add easy-and-fast-auth package to your project.
 
 ```javascript
-const fastAuth = require('fast-auth');
+const easyAndFastAuth = require('easy-and-fast-auth');
 ```
 
 Fill the object according to your variablers.
@@ -30,8 +30,8 @@ const authConfig = {
 };
 ```
 
-Then use this object as a parameter of the fastAuth function.
+Then use this object as a parameter of the easyAndFastAuth function.
 
 ```javascript
-fastAuth(authConfig);
+easyAndFastAuth(authConfig);
 ```

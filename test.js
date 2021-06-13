@@ -1,4 +1,4 @@
-const fastAuth = require('./index');
+const easyAndFastAuth = require('./index');
 
 const authConfig = {
   connectionString:
@@ -7,4 +7,4 @@ const authConfig = {
   path: '/user'
 };
 
-fastAuth(authConfig);
+easyAndFastAuth(authConfig);
