@@ -1,8 +1,7 @@
 const easyAndFastAuth = require('./index');
 
 const authConfig = {
-  connectionString:
-    'mongodb+srv://talhaKaratas:iU0unCqqSgBXZFxV@cluster0.dlarn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+  connectionString: 'connection string',
   portNumber: 3000,
   path: '/user'
 };
