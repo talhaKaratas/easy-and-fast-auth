@@ -7,7 +7,7 @@ Easy and fast authantication and authorization for your projects
 Add simple-auth package to your project.
 
 ```javascript
-const simpleAuth = require('simple-auth');
+const fastAuth = require('fast-auth');
 ```
 
 Fill the object according to your variablers.
@@ -23,5 +23,5 @@ const authConfig = {
 Then use this object as a parameter of the simpleAuth function.
 
 ```javascript
-simpleAuth(authConfig);
+fastAuth(authConfig);
 ```
