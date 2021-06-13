@@ -2,9 +2,19 @@
 
 Easy and fast authantication and authorization for your projects
 
-### usage
+**Note:** This package use mongoose and express.
 
-Add simple-auth package to your project.
+**Note:** Connection string must be mongodb connection string
+
+### Installation
+
+```sh
+    npm install fast-auth
+```
+
+### Usage
+
+Add fast-auth package to your project.
 
 ```javascript
 const fastAuth = require('fast-auth');
@@ -20,7 +30,7 @@ const authConfig = {
 };
 ```
 
-Then use this object as a parameter of the simpleAuth function.
+Then use this object as a parameter of the fastAuth function.
 
 ```javascript
 fastAuth(authConfig);
