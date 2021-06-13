@@ -30,8 +30,41 @@ const authConfig = {
 };
 ```
 
+Set jsonwebtoken token secret.
+
+```javascript
+easyAndFastAuth.routesConfig.tokenSecret = 'asdbıbdfıbf';
+```
+
 Then use this object as a parameter of the easyAndFastAuth function.
 
 ```javascript
-easyAndFastAuth(authConfig);
+easyAndFastAuth.auth(authConfig);
+```
+
+## Post for Register
+
+http://localhost:3000/user/register
+
+##### Request Body
+
+```json
+{
+  "name": "my name",
+  "email": "myemail@email.com",
+  "password": "mypassword"
+}
+```
+
+## Post for Login
+
+http://localhost:3000/user/login
+
+##### Request Body
+
+```json
+{
+  "email": "myemail@email.com",
+  "password": "mypassword"
+}
 ```
