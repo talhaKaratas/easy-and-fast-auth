@@ -1,6 +1,6 @@
 {
   "name": "easy-and-fast-auth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easy and fast authentication and authorization for your projects",
   "main": "index.js",
   "scripts": {
