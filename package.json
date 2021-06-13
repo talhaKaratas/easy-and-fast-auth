@@ -1,5 +1,5 @@
 {
-  "name": "simple-auth",
+  "name": "fast-auth",
   "version": "1.0.0",
   "description": "Easy and fast authentication and authorization for your projects",
   "main": "index.js",

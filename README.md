@@ -1,4 +1,4 @@
-# simple-auth
+# fast-auth
 
 Easy and fast authantication and authorization for your projects
 
