@@ -3,8 +3,16 @@ const express = require('express');
 const mainRoute = require('./src/main');
 const cors = require('cors');
 const { routesConfig } = require('./src/routesConfig');
+const verified = require('./src/verifyToken');
 
 function auth(config) {
+  if (config.tokenSecret) routesConfig.tokenSecret = config.tokenSecret;
+  if (config.nameMinLength) routesConfig.nameMinLength = config.nameMinLength;
+  if (config.emailMinLength)
+    routesConfig.emailMinLength = config.emailMinLength;
+  if (config.passwordMinLength)
+    routesConfig.passwordMinLength = config.passwordMinLength;
+
   const app = express();
 
   app.use(cors());
@@ -28,4 +36,4 @@ function auth(config) {
   });
 }
 
-module.exports = { auth, routesConfig };
+module.exports = { auth };

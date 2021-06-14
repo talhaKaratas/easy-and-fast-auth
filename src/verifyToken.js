@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const { routesConfig } = require('./routesConfig');
 
 module.exports = function auth(req, res, next) {
   const token = req.header('auth_token');
@@ -7,7 +8,7 @@ module.exports = function auth(req, res, next) {
   }
 
   try {
-    const verified = jwt.verify(token, process.env.TOKEN_SECRET);
+    const verified = jwt.verify(token, routesConfig.tokenSecret);
     req.user = verified;
     next();
   } catch (err) {

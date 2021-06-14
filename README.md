@@ -2,7 +2,7 @@
 
 Easy and fast authantication and authorization for your projects
 
-**Note:** This package use mongoose and express.
+**Note:** This package use mongoose, express, jsonwebtoken and bcryptjs.
 
 **Note:** Connection string must be mongodb connection string
 
@@ -26,15 +26,22 @@ Fill the object according to your variablers.
 const authConfig = {
   connectionString: 'my connectionstring', //only mongoDB
   portNumber: 3000,
-  path: '/user'
+  path: '/user',
+  tokenSecret: 'asdbıbdfıbf',
+  nameMinLength: 6, //optional, defualt 3
+  passwordMinLength: 8, //optional, default 6
+  emailMinLength: 8 //optional, default 6
 };
 ```
 
-Set jsonwebtoken token secret.
+Let's explane above code
 
-```javascript
-easyAndFastAuth.routesConfig.tokenSecret = 'asdbıbdfıbf';
-```
+- **connectionString:** Your mongoDB connectionString.
+- **portNumber:** Number the port you want to run your server on.
+- **path:** Enter the route like '/user', '/api'.
+- **nameMinLength:** Minimum name lenght. if user's name is less than nameMinLength, register or login doesn't success. This field is optional. if you don't set variable, default value be 3
+- **emailMinLength:** Minimum email lenght. if user's email is less than emailMinLength, register or login doesn't success. This field is optional. if you don't set variable, default value be 6
+- **passwordMinLength:** Minimum password lenght. if user's password is less than passwordMinLength, register or login doesn't success. This field is optional. if you don't set variable, default value be 6
 
 Then use this object as a parameter of the easyAndFastAuth function.
 
@@ -44,7 +51,9 @@ easyAndFastAuth.auth(authConfig);
 
 ## Post for Register
 
+```
 http://localhost:3000/user/register
+```
 
 ##### Request Body
 
@@ -58,7 +67,9 @@ http://localhost:3000/user/register
 
 ## Post for Login
 
+```
 http://localhost:3000/user/login
+```
 
 ##### Request Body
 
